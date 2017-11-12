@@ -9,20 +9,3 @@ Here are the few use cases for singleton design pattern
 3. Create logging objects which can be used to write logs
 4. Create Caching objects
 
-//singleton class
-public class SingletonClass{
-	private static volatile SingletonClass instance = null;
-	private SingletonClass(){
-		System.out.println("Instance created");
-	}
-	public static SingletonClass getInstance(){
-		if(instance == null){
-			synchronized(SingletonClass.class){
-				if(instance == null)
-					instance = new SingletonClass();
-			}
-		}
-			return instance;
-	}
-	
-}
